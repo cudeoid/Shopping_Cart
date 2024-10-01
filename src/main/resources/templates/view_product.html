@@ -20,11 +20,12 @@
 					<th:block th:if="${session.errorMsg}">
 						<p class="text-danger text-center  alert alert-danger">[[${session.errorMsg}]]</p>
 						<th:block th:text="${@commnServiceImpl.removeSessionMessage()}"></th:block>
-
 					</th:block>
 					<div class="col-md-6 text-end">
-						<img alt="" src="/img/product_img/laptop.jpg" width="330px"
-							height="400px">
+<!--						<img alt="" src="/img/product_img/[[${product.image}]]" width="330px"-->
+<!--							height="400px">-->
+						<img alt="" th:src="@{'/img/product_img/'+${product.image}}"
+							 width="330px" height="400px">
 					</div>
 
 					<div class="col-md-6">
@@ -70,7 +71,7 @@
 								<p>Free Shipping</p>
 							</div>
 						</div>
-
+<!--						<th:block th:if="${user.role.equals("ROLE_USER")}">-->
 						<th:block th:if="${product.stock>0}">
 							<th:block th:if="${user==null}">
 								<a href="/signin" class="btn btn-danger col-md-12">Add To
@@ -89,6 +90,8 @@
 							<a href="#" class="btn text-white btn-warning col-md-12">Out
 								of Stock</a>
 						</th:block>
+
+<!--						</th:block>-->
 
 					</div>
 				</div>

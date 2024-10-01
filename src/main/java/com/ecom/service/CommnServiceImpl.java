@@ -10,6 +10,8 @@ import jakarta.servlet.http.HttpSession;
 @Service
 public class CommnServiceImpl implements CommonService {
 
+	// Eita jau sabu message gudaka ase ....
+	// seita sarila pare .... remove kariba ....
 	@Override
 	public void removeSessionMessage() {
 		HttpServletRequest request = ((ServletRequestAttributes) (RequestContextHolder.getRequestAttributes()))

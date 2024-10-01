@@ -24,10 +24,11 @@
 									th:if="${session.SPRING_SECURITY_LAST_EXCEPTION!=null}">
 									[[${session.SPRING_SECURITY_LAST_EXCEPTION.message}]]
 								</th:block>
-
-
-
 							</div>
+
+<!-- session.SPRING_SECURITY_LAST_EXCEPTION -&#45;&#45; ethire amara erorr ta
+dynamic heijae ,,, SPRING SECURITY TA param.error re eroro message ta check kare .....like jadi user ta deactive achi
+then taku login karibaku debanni -->
 
 							<div th:if="${param.logout}" class="alert alert-success">
 								Logout Sucessfully</div>
@@ -35,12 +36,12 @@
 						<div class="card-body">
 							<form action="/login" method="post">
 								<div class="mb-3">
-									<label class="form-label">Email</label> <input
+									<label class="form-label">Email</label> <input required
 										class="form-control" name="username" type="email">
 								</div>
 
 								<div class="mb-3">
-									<label class="form-label">Password</label> <input
+									<label class="form-label">Password</label> <input required
 										class="form-control" name="password" type="password">
 								</div>
 								<button type="submit"
@@ -50,7 +51,7 @@
 
 						<div class="card-footer text-center">
 							<a href="/forgot-password" class="text-decoration-none">Forgot Password</a><br>
-							Don't have an account ? <a href="#" class="text-decoration-none">Create
+							Don't have an account ? <a href="/register" class="text-decoration-none">Create
 								one </a>
 						</div>
 					</div>

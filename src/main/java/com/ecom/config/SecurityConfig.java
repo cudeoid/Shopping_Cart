@@ -19,7 +19,7 @@ public class SecurityConfig {
 	private AuthenticationSuccessHandler authenticationSuccessHandler;
 	
 	@Autowired
-	@Lazy // Here I use lazy , to go out to the loop
+	@Lazy
 	private AuthFailureHandlerImpl authenticationFailureHandler;
 	
 	@Bean
